@@ -357,78 +357,10 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 function animateRun () {
     mainRunLeft = animation.createAnimation(ActionKind.RunningLeft, 100)
     animation.attachAnimation(hero, mainRunLeft)
-    mainRunLeft.addAnimationFrame(img`
-        . . . . . . . . . . . . . . . . 
-        . . . f f f f f f f . . . . . . 
-        . . f e e e e e e e f . . . . . 
-        . f e e e e e e e e e f . . . . 
-        . f d d d d e d d e e f . . . . 
-        . f d d f d d e d e e f . . . . 
-        . f d d f d d d e e e f . . . . 
-        . f d d f d d d d d d f . . . . 
-        . f d d d d d d d d d f . . . . 
-        . . f c c c a a c c b f . . . . 
-        . . f c c d d d c c b f . . . . 
-        . . f b f f d d f f f f . . . . 
-        . . f a a a a a a a b f . . . . 
-        . . . f a a a a b f f . . . . . 
-        . . . f a a a a b f . . . . . . 
-        . . . . f f f f f . . . . . . . 
-        `)
-    mainRunLeft.addAnimationFrame(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . f f f f f f f . . . . . . 
-        . . f e e e e e e e f . . . . . 
-        . f e e e e e e e e e f . . . . 
-        . f d d d d e d d e e f . . . . 
-        . f d d f d d e d e e f . . . . 
-        . f d d f d d d e e e f . . . . 
-        . f d d f d d d d d d f . . . . 
-        . f d d d d d d d d d f . . . . 
-        . . f c c c c a a c b f . . . . 
-        . . f c c c c d d c b f . . . . 
-        . . f b f f d d d f f f f . . . 
-        . . f a a a a a a a a b f f . . 
-        . . . f a a b f f a a a f f . . 
-        . . . . f f f . f f f f f . . . 
-        `)
-    mainRunLeft.addAnimationFrame(img`
-        . . . . . . . . . . . . . . . . 
-        . . . f f f f f f f . . . . . . 
-        . . f e e e e e e e f . . . . . 
-        . f e e e e e e e e e f . . . . 
-        . f d d d d e d d e e f . . . . 
-        . f d d f d d e d e e f . . . . 
-        . f d d f d d d e e e f . . . . 
-        . f d d f d d d d d d f . . . . 
-        . f d d d d d d d d d f . . . . 
-        . . f c c c a a c c b f . . . . 
-        . . f c c d d d c c b f . . . . 
-        . . f b f f d d f f f f . . . . 
-        . . f a a a a a a a b f . . . . 
-        . . . f a a a a b f f . . . . . 
-        . . . f a a a a b f . . . . . . 
-        . . . . f f f f f . . . . . . . 
-        `)
-    mainRunLeft.addAnimationFrame(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . f f f f f f f . . . . . . 
-        . . f e e e e e e e f . . . . . 
-        . f e e e e e e e e e f . . . . 
-        . f d d d d e d d e e f . . . . 
-        . f d d f d d e d e e f . . . . 
-        . f d d f d d d e e e f . . . . 
-        . f d d f d d d d d d f . . . . 
-        . f d d d d d d d d d f . . . . 
-        . . f c a a c c c c b f . . . . 
-        . f d d d b c c c c b f . . . . 
-        f f f d d f f f f f f f . . . . 
-        f f f a a a a a a a b f . . . . 
-        . f a a b f a a b f f . . . . . 
-        . f f f f . f f f . . . . . . . 
-        `)
+    mainRunLeft.addAnimationFrame(assets.image`Meera-left2`)
+    mainRunLeft.addAnimationFrame(assets.image`Meera-left3`)
+    mainRunLeft.addAnimationFrame(assets.image`Meera-left2`)
+    mainRunLeft.addAnimationFrame(assets.image`Meera-left1`)
     mainRunRight = animation.createAnimation(ActionKind.RunningRight, 100)
     animation.attachAnimation(hero, mainRunRight)
     mainRunRight.addAnimationFrame(assets.image`Meera-right2`)

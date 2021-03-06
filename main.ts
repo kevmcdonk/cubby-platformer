@@ -431,78 +431,10 @@ function animateRun () {
         `)
     mainRunRight = animation.createAnimation(ActionKind.RunningRight, 100)
     animation.attachAnimation(hero, mainRunRight)
-    mainRunRight.addAnimationFrame(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . f f f f f f f . . . 
-        . . . . . f e e e e e e e f . . 
-        . . . . f e e e e e e e e e f . 
-        . . . . f e e d d e d d d d f . 
-        . . . . f e e d e d d f d d f . 
-        . . . . f e e e d d d f d d f . 
-        . . . . f d d d d d d f d d f . 
-        . . . . f d d d d d d d d d f . 
-        . . . . f b c c a a c c c f . . 
-        . . . . f b c c d d d c c f . . 
-        . . . . f f f f d d f f b f . . 
-        . . . . f b a a a a a a a f . . 
-        . . . . . f f b a a a a f . . . 
-        . . . . . . f b a a a a f . . . 
-        . . . . . . . f f f f f . . . . 
-        `)
-    mainRunRight.addAnimationFrame(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . f f f f f f f . . . 
-        . . . . . f e e e e e e e f . . 
-        . . . . f e e e e e e e e e f . 
-        . . . . f e e d d e d d d d f . 
-        . . . . f e e d e d d f d d f . 
-        . . . . f e e e d d d f d d f . 
-        . . . . f d d d d d d f d d f . 
-        . . . . f d d d d d d d d d f . 
-        . . . . f b c a a c c c c f . . 
-        . . . . f b c d d c c c c f . . 
-        . . . f f f f d d d f f b f . . 
-        . . f f b a a a a a a a a f . . 
-        . . f f a a a f f b a a f . . . 
-        . . . f f f f . . f f f . . . . 
-        `)
-    mainRunRight.addAnimationFrame(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . f f f f f f f . . . 
-        . . . . . f e e e e e e e f . . 
-        . . . . f e e e e e e e e e f . 
-        . . . . f e e d d e d d d d f . 
-        . . . . f e e d e d d f d d f . 
-        . . . . f e e e d d d f d d f . 
-        . . . . f d d d d d d f d d f . 
-        . . . . f d d d d d d d d d f . 
-        . . . . f b c c a a c c c f . . 
-        . . . . f b c c d d d c c f . . 
-        . . . . f f f f d d f f b f . . 
-        . . . . f b a a a a a a a f . . 
-        . . . . . f f b a a a a f . . . 
-        . . . . . . f b a a a a f . . . 
-        . . . . . . . f f f f f . . . . 
-        `)
-    mainRunRight.addAnimationFrame(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . f f f f f f f . . . 
-        . . . . . f e e e e e e e f . . 
-        . . . . f e e e e e e e e e f . 
-        . . . . f e e d d e d d d d f . 
-        . . . . f e e d e d d f d d f . 
-        . . . . f e e e d d d f d d f . 
-        . . . . f d d d d d d f d d f . 
-        . . . . f d d d d d d d d d f . 
-        . . . . f b c c c c a a c f . . 
-        . . . . f b c c c c b d d d f . 
-        . . . . f f f f f f f d d f f f 
-        . . . . f b a a a a a a a f f f 
-        . . . . . f f b a a f b a a f . 
-        . . . . . . . f f f . f f f . . 
-        `)
+    mainRunRight.addAnimationFrame(assets.image`Meera-right2`)
+    mainRunRight.addAnimationFrame(assets.image`Meera-right3`)
+    mainRunRight.addAnimationFrame(assets.image`Meera-right2`)
+    mainRunRight.addAnimationFrame(assets.image`Meera-right1`)
 }
 function animateJumps () {
     // Because there isn't currently an easy way to say "play this animation a single time
@@ -779,7 +711,7 @@ function createPlayer (player2: Sprite) {
 }
 function initializeLevel (level: number) {
     effects.clouds.startScreenEffect()
-    playerStartLocation = tiles.getTilesByType(assets.tile`tile6`)[0]
+    playerStartLocation = tiles.getTilesByType(assets.tile`Meera-idleright`)[0]
     tiles.placeOnTile(hero, playerStartLocation)
     tiles.setTileAt(playerStartLocation, assets.tile`tile0`)
     createEnemies()

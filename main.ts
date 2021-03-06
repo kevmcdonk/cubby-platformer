@@ -235,24 +235,7 @@ function attemptJump () {
 function animateIdle () {
     mainIdleLeft = animation.createAnimation(ActionKind.IdleLeft, 100)
     animation.attachAnimation(hero, mainIdleLeft)
-    mainIdleLeft.addAnimationFrame(img`
-        . . . . . . . . . . . . . . . . 
-        . . . f f f f f f f f f f . . . 
-        . . f e e e e e e e e e e f . . 
-        . f e e e e e e e e e e e e f . 
-        . f d d d d d d d d d e e d f . 
-        . f d d f d d d d f d d e d f . 
-        . f d d f d d d d f d d d e f . 
-        . f d d f d d d d f d d d f . . 
-        . f d d d d d d d d d d d f . . 
-        . f a c c c c c c c c a b f . . 
-        . f d d c c c c c c d d d f . . 
-        . f d f f f b b f f f d d f . . 
-        . . f a a a a a a a a a b f . . 
-        . . . f a a b f f a a b f . . . 
-        . . . f a a b f f a a b f . . . 
-        . . . . f f f . . f f f . . . . 
-        `)
+    mainIdleLeft.addAnimationFrame(assets.image`Meera-idleleft`)
 }
 function setLevelTileMap (level: number) {
     clearGame()
@@ -374,162 +357,26 @@ function animateJumps () {
     // the same behavior
     mainJumpLeft = animation.createAnimation(ActionKind.JumpingLeft, 100)
     animation.attachAnimation(hero, mainJumpLeft)
-    mainJumpLeft.addAnimationFrame(img`
-        . . . . . . . . . . . . . . . . 
-        . . . f f f f f f f f f f . . . 
-        . . f e e e e e e e e e e f . . 
-        . f e e e e e e e e e e e e f . 
-        . f d d d d d d d d d e e d f . 
-        . f d d f d d d d f d d e d f . 
-        . f d d f d d d d f d d d e f . 
-        . f d d f d d d d f d d d f . . 
-        . f d d d d d d d d d d d f . . 
-        . f a c c c c c c c c a b f . . 
-        . f d d c c c c c c d d d f . . 
-        . f d f f f b b f f f d d f . . 
-        . . f a a a a a a a a a b f . . 
-        . . . f a a b f f a a b f . . . 
-        . . . f a a b f f a a b f . . . 
-        . . . . f f f . . f f f . . . . 
-        `)
-    mainJumpLeft.addAnimationFrame(img`
-        . . . . . . . . . . . . . . . . 
-        . . . f f f f f f f f f f . . . 
-        . . f e e e e e e e e e e f . . 
-        . f e e e e e e e e e e e e f . 
-        . f d d d d d d d d d e e d f . 
-        . f d d f d d d d f d d e d f . 
-        . f d d f d d d d f d d d e f . 
-        . f d d f d d d d f d d d f . . 
-        . f d d d d d d d d d d d f . . 
-        . f a c c c c c c c c a b f . . 
-        . f d d c c c c c c d d d f . . 
-        . f d f f f b b f f f d d f . . 
-        . . f a a a a a a a a a b f . . 
-        . . . f a a b f f a a b f . . . 
-        . . . . f f f . . f f f . . . . 
-        . . . . . . . . . . . . . . . . 
-        `)
+    mainJumpLeft.addAnimationFrame(assets.image`Meera-idleleft`)
+    mainJumpLeft.addAnimationFrame(assets.image`Meera-jumpleft`)
     for (let index = 0; index < 30; index++) {
-        mainJumpLeft.addAnimationFrame(img`
-            . . . . . . . . . . . . . . . . 
-            . . . f f f f f f f f f f . . . 
-            . . f e e e e e e e e e e f . . 
-            . f e e e e e e e e e e e e f . 
-            . f d d d d d d d d d e e d f . 
-            . f d d f d d d d f d d e d f . 
-            . f d d f d d d d f d d d e f . 
-            . f d d f d d d d f d d d f . . 
-            . f d d d d d d d d d d d f f . 
-            . d a b c c c c c c c c b a d . 
-            . d a c c c c c c c c c c a d . 
-            . f f f f f b b f f f f f f f . 
-            . . f a a a a a a a a a b f . . 
-            . . . f a a b f f a a b f . . . 
-            . . . . f f f . . f f f . . . . 
-            . . . . . . . . . . . . . . . . 
-            `)
+        mainJumpLeft.addAnimationFrame(assets.image`Meera-jumpleft`)
     }
     mainJumpRight = animation.createAnimation(ActionKind.JumpingRight, 100)
     animation.attachAnimation(hero, mainJumpRight)
-    mainJumpRight.addAnimationFrame(img`
-        . . . . . . . . . . . . . . . . 
-        . . . f f f f f f f f f f . . . 
-        . . f e e e e e e e e e e f . . 
-        . f e e e e e e e e e e e e f . 
-        . f d e e d d d d d d d d d f . 
-        . f d e d d f d d d d f d d f . 
-        . f e d d d f d d d d f d d f . 
-        . . f d d d f d d d d f d d f . 
-        . . f d d d d d d d d d d d f . 
-        . . f b a c c c c c c c c a f . 
-        . . f d d d c c c c c c d d f . 
-        . . f d d f f f b b f f f d f . 
-        . . f b a a a a a a a a a f . . 
-        . . . f b a a f f b a a f . . . 
-        . . . f b a a f f b a a f . . . 
-        . . . . f f f . . f f f . . . . 
-        `)
-    mainJumpRight.addAnimationFrame(img`
-        . . . . . . . . . . . . . . . . 
-        . . . f f f f f f f f f f . . . 
-        . . f e e e e e e e e e e f . . 
-        . f e e e e e e e e e e e e f . 
-        . f d e e d d d d d d d d d f . 
-        . f d e d d f d d d d f d d f . 
-        . f e d d d f d d d d f d d f . 
-        . . f d d d f d d d d f d d f . 
-        . . f d d d d d d d d d d d f . 
-        . . f b a c c c c c c c c a f . 
-        . . f d d d c c c c c c d d f . 
-        . . f d d f f f b b f f f d f . 
-        . . f b a a a a a a a a a f . . 
-        . . . f b a a f f b a a f . . . 
-        . . . . f f f . . f f f . . . . 
-        . . . . . . . . . . . . . . . . 
-        `)
+    mainJumpRight.addAnimationFrame(assets.image`Meera-idleright`)
+    mainJumpRight.addAnimationFrame(assets.image`Meera-jumpright`)
     for (let index = 0; index < 30; index++) {
-        mainJumpRight.addAnimationFrame(img`
-            . . . . . . . . . . . . . . . . 
-            . . . f f f f f f f f f f . . . 
-            . . f e e e e e e e e e e f . . 
-            . f e e e e e e e e e e e e f . 
-            . f d e e d d d d d d d d d f . 
-            . f d e d d f d d d d f d d f . 
-            . f e d d d f d d d d f d d f . 
-            . . f d d d f d d d d f d d f . 
-            . f f d d d d d d d d d d d f . 
-            . d a b c c c c c c c c b a d . 
-            . d a c c c c c c c c c c a d . 
-            . f f f f f f f b b f f f f f . 
-            . . f b a a a a a a a a a f . . 
-            . . . f b a a f f b a a f . . . 
-            . . . . f f f . . f f f . . . . 
-            . . . . . . . . . . . . . . . . 
-            `)
+        mainJumpRight.addAnimationFrame(assets.image`Meera-jumpright`)
     }
 }
 function animateCrouch () {
     mainCrouchLeft = animation.createAnimation(ActionKind.CrouchLeft, 100)
     animation.attachAnimation(hero, mainCrouchLeft)
-    mainCrouchLeft.addAnimationFrame(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . f f f f f f f f f f . . . 
-        . . f e e e e e e e e e e f . . 
-        . f e e e e e e e e e e e e f . 
-        . f d d d d d d d d d e e d f . 
-        . f d d f d d d d f d d e d f . 
-        . f d d f d d d d f d d d e f . 
-        . f d d f d d d d f d d d f . . 
-        . f d d d d d d d d d d d f . . 
-        . f a c c c c c c c c a b f . . 
-        . f d c c c c c c c c c d d f . 
-        f d d f f f b b f f f f d d f . 
-        . f f a a a a a a a a a b f . . 
-        . . . f f f f . f f f f f . . . 
-        `)
+    mainCrouchLeft.addAnimationFrame(assets.image`Meera-crouchleft`)
     mainCrouchRight = animation.createAnimation(ActionKind.CrouchRight, 100)
     animation.attachAnimation(hero, mainCrouchRight)
-    mainCrouchRight.addAnimationFrame(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . f f f f f f f f f f . . . 
-        . . f e e e e e e e e e e f . . 
-        . f e e e e e e e e e e e e f . 
-        . f d e e d d d d d d d d d f . 
-        . f d e d d f d d d d f d d f . 
-        . f e d d d f d d d d f d d f . 
-        . . f d d d f d d d d f d d f . 
-        . . f d d d d d d d d d d d f . 
-        . . f b a c c c c c c c c a f . 
-        . f d d c c c c c c c c c d f . 
-        . f d d f f f f b b f f f d d f 
-        . . f b a a a a a a a a a f f . 
-        . . . f f f f f . f f f f . . . 
-        `)
+    mainCrouchRight.addAnimationFrame(assets.image`Meera-crouchRight`)
 }
 function clearGame () {
     for (let value of sprites.allOfKind(SpriteKind.Bumper)) {
@@ -701,24 +548,7 @@ let gravity = 0
 let pixelsToMeters = 0
 let invincibilityPeriod = 0
 let hero: Sprite = null
-hero = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . f f f f f f f f f f . . . 
-    . . f e e e e e e e e e e f . . 
-    . f e e e e e e e e e e e e f . 
-    . f d e e d d d d d d d d d f . 
-    . f d e d d f d d d d f d d f . 
-    . f e d d d f d d d d f d d f . 
-    . . f d d d f d d d d f d d f . 
-    . . f d d d d d d d d d d d f . 
-    . . f b a c c c c c c c c a f . 
-    . . f d d d c c c c c c d d f . 
-    . . f d d f f f b b f f f d f . 
-    . . f b a a a a a a a a a f . . 
-    . . . f b a a f f b a a f . . . 
-    . . . f b a a f f b a a f . . . 
-    . . . . f f f . . f f f . . . . 
-    `, SpriteKind.Player)
+hero = sprites.create(assets.image`Meera-idleright`, SpriteKind.Player)
 // how long to pause between each contact with a
 // single enemy
 invincibilityPeriod = 600

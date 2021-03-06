@@ -253,26 +253,6 @@ function animateIdle () {
         . . . f a a b f f a a b f . . . 
         . . . . f f f . . f f f . . . . 
         `)
-    mainIdleRight = animation.createAnimation(ActionKind.IdleRight, 100)
-    animation.attachAnimation(hero, mainIdleRight)
-    mainIdleRight.addAnimationFrame(img`
-        . . . . . . . . . . . . . . . . 
-        . . . f f f f f f f f f f . . . 
-        . . f e e e e e e e e e e f . . 
-        . f e e e e e e e e e e e e f . 
-        . f d e e d d d d d d d d d f . 
-        . f d e d d f d d d d f d d f . 
-        . f e d d d f d d d d f d d f . 
-        . . f d d d f d d d d f d d f . 
-        . . f d d d d d d d d d d d f . 
-        . . f b a c c c c c c c c a f . 
-        . . f d d d c c c c c c d d f . 
-        . . f d d f f f b b f f f d f . 
-        . . f b a a a a a a a a a f . . 
-        . . . f b a a f f b a a f . . . 
-        . . . f b a a f f b a a f . . . 
-        . . . . f f f . . f f f . . . . 
-        `)
 }
 function setLevelTileMap (level: number) {
     clearGame()
@@ -847,7 +827,6 @@ let mainRunRight: animation.Animation = null
 let mainRunLeft: animation.Animation = null
 let flierIdle: animation.Animation = null
 let flierFlying: animation.Animation = null
-let mainIdleRight: animation.Animation = null
 let mainIdleLeft: animation.Animation = null
 let doubleJumpSpeed = 0
 let canDoubleJump = false

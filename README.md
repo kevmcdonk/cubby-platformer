@@ -1,18 +1,10 @@
+ ## Cubby Platformer
  
+ This repository is designed for Cubs to learn a little about making a game but more importantly, how to store and maintain their code in GitHub. It is using [MakeCode](https://arcade.makecode.com/) and builds a platformer game that the Cubs can enhance.
 
+## Getting started ![Build status badge](https://github.com/kevmcdonk/cubby-platformer/workflows/MakeCode/badge.svg)
 
-> Open this page at [https://kevmcdonk.github.io/cubby-platformer/](https://kevmcdonk.github.io/cubby-platformer/)
-
-## Use as Extension
-
-This repository can be added as an **extension** in MakeCode.
-
-* open [https://arcade.makecode.com/](https://arcade.makecode.com/)
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
-* search for **https://github.com/kevmcdonk/cubby-platformer** and import
-
-## Edit this project ![Build status badge](https://github.com/kevmcdonk/cubby-platformer/workflows/MakeCode/badge.svg)
+Before starting, you will need to create a GitHub account from https://www.github.com if you do not already have one.
 
 To edit this repository in MakeCode.
 
